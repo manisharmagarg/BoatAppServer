@@ -3,9 +3,7 @@
 #
 
 from flask import Flask, render_template, request
-
 from flask_restful import Resource, Api, reqparse
-
 from models import User, Boat, Report, Likes, Thanks, db, app
 from utils import *
 from flask import jsonify
@@ -13,7 +11,6 @@ import traceback
 from math import sin, cos, atan2, sqrt, radians
 import os
 import json
-
 from utils import dlog
 
 lng1 = radians(21.012287)
@@ -691,6 +688,5 @@ def get_police_boat_locations():
 #                                                               #
 #################################################################
 if __name__ == "__main__":
-    # db.create_all()
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True, threaded=True)
