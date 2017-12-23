@@ -1,0 +1,12 @@
+Some random docs for help!
+
+Connect to mysql cmldline
+
+$ mysql -u root -p
+
+$ show databases
+$ use boatappdb
+$ show tables
+
+Create Database
+$create database boatappdb

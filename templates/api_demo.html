@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+    	<!-- 
+    	
+
+        <h1>Like Report</h1>
+        <form method="post" action="/save_like_report">
+            <table>
+                <tr>
+                    <th>Report ID</th>
+                    <td><input type="text" name="report_id" placeholder="Enter the Report Id"></td>
+                </tr>
+                <tr>
+                    <th>User ID</th>
+                    <td><input type="text" name="user_id" placeholder="Enter the User Id"></td>
+                </tr>
+                <tr>
+                    <th>Like</th>
+                    <td><input type="text" name="likes" placeholder="Likes"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="save Likes">
+                </tr>
+            </table>
+        </form>
+
+    	<a href="/get_police_boats">Get Police Boats</a><br>
+    	<a href="/get_police_boat_locations">Get Police Boats Location</a><br> -->
+
+
+
+        <h4>Add Police Boat</h4>
+        <form method="post" action="/save_police_boat">
+            <TABLE>
+                <tr>
+                    <th>Boat Name</th>
+                    <td><input type="text" name="boat_name" placeholder="Enter the Boat Number"></td>
+                </tr>
+                <tr>
+                    <th>Boat Type</th>
+                    <td><input type="text" name="btype" placeholder="Enter the Btype"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="save">
+                </tr>
+            </TABLE>
+        </form>
+
+
+        <!-- ++++++++++++++++++++++++++++++++++ verify phone no ++++++++++++++++++++++++++++++  -->
+
+        <h2>verify phone no</h2>
+        <form  method="post" action="/verify_phoneno">
+            <table>
+                <tr>
+                    <th>
+                        Phone No
+                    </th>
+                    <td>
+                        <input type="phone" name="phoneno" placeholder="Enter Phone No">
+                    </td>
+                </tr>
+                 <tr>
+                    <td colspan="2"><input type="submit" value="Verify Phone No">
+                </tr>
+            </table>
+        </form>
+
+
+
+ <!-- ++++++++++++++++++++++++++++++++++Verify Code ++++++++++++++++++++++++++++++  -->
+
+        <h2>Verify Code</h2>
+        <form method="post" action="/verify_code">
+            <table>
+                <tr>
+                    <th>
+                        Phone No
+                    </th>
+                    <td>
+                        <input type="phone" name="phoneno" placeholder="Enter Phone No">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Verification Code</th>
+                    <td>
+                        <input type="phone" name="vcode" placeholder="Enter Verification Code">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+
+         <!-- ++++++++++++++++++++++++++++++++++ Add Like ++++++++++++++++++++++++++++++  -->
+
+        <h2>Add Like</h2>
+        <form method="post" action="/add_like">
+            <table>
+                <tr>
+                    <th>Report ID</th>
+                    <td><input type="text" name="report_id" placeholder="enter Report ID"></td>
+                </tr>
+                <tr>
+                    <th>
+                        User ID:
+                    </th>
+                    <td><input type="text" name="user_id" placeholder="Enter User ID"></td>
+                </tr>
+                <tr>
+                    <th>Value</th>
+                    <td><input type="text" name="value" placeholder="1 for like, 0 for dislike"></td>
+                </tr>
+                <tr>
+                    <th> Flag Value</th>
+                    <td><input type="text" name="flag_value" placeholder="1/0 Flag Value"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Add Like">
+                </tr> 
+            </table>
+        </form>
+
+
+
+     <!-- ++++++++++++++++++++++++++++++++++ Get Reports Like ++++++++++++++++++++++++++++++  -->
+
+        <h2>Get Report Like</h2>
+        <form method="post" action="/get_like_count">
+            <table>
+                <tr>
+                    <th>Report Id</th>
+                    <td>
+                        <input type="text" name="report_id" placeholder="Enter Report Id">
+                    </td>
+                </tr>
+                <tr>
+                    <th>user Id</th>
+                    <td>
+                        <input type="text" name="user_id" placeholder="Enter user Id">
+                    </td>
+                </tr>
+                <tr> 
+
+
+                    <td colspan="2"><input type="submit" value="Get Report Like">
+                </tr>
+            </table>
+        </form>
+
+
+         <!-- ++++++++++++++++++++++++++++++++++ Get User Like/Dislike ++++++++++++++++++++++++++++++  -->
+
+        <h2>Total Likes/Dislikes of a User</h2>
+        <form method="post" action="/users_likes_dislikes">
+            <table>
+                <tr>
+                    <th>User Id</th>
+                    <td><input type="text" name="user_id" placeholder="Enter User Id"></td>
+                </tr>
+               <tr>
+                    <td colspan="2"><input type="submit" value="User Likes/Dislikes">
+                </tr>
+            </table>
+        </form>
+
+ <!-- ++++++++++++++++++++++++++++++++++ Add Thanks ++++++++++++++++++++++++++++++  -->
+
+
+        <h2>Add Thanks</h2>
+        <form  method="post" action="/add_thanks">
+            <table>
+                <tr>
+                    <th>Report ID </th>
+                    <td><input type="text" name="thanks_report_id" placeholder="enter Report ID"></td>
+                </tr>
+                <tr>
+                    <th>
+                        User ID:
+                    </th>
+                    <td><input type="text" name="thanks_user_id" placeholder="Enter User ID"></td>
+                </tr>
+                 <tr>
+                    <th>Flag</th>
+                    <td><input type="text" name="flag_value" placeholder="enter Flag"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Add thanks">
+                </tr>
+            </table>
+        </form>
+
+
+        <!-- ++++++++++++++++++++++++++++++++++ Total Thanks for Report ++++++++++++++++++++++++++++++  -->
+
+        <h2>Total Thanks for Report</h2>
+        <form method="post" action="/total_thanks">
+            <table>
+                <tr>
+                    <th>Report Id</th>
+                    <td><input type="text" name="report_id" placeholder="Enter Report Id"></td>
+                </tr>
+                <tr>
+                    <th>User Id</th>
+                    <td><input type="text" name="user_id" placeholder="Enter User Id"></td>
+                </tr>
+               <tr>
+                    <td colspan="2"><input type="submit" value="total_thanks">
+                </tr>
+            </table>
+        </form>
+
+        <!-- ++++++++++++++++++++++++++++++++++ Save Reports ++++++++++++++++++++++++++++++  -->
+
+        <h2>Save Reports</h2>
+         <form  method="post" action="/save_reports">
+            <table>
+                <!-- <tr>
+                    <th>Boat Id</th>
+                    <td><input type="text" name="boat_id" placeholder="Enter Boat Id"></td>
+                </tr> -->
+                <tr>
+                    <th>Boat name</th>
+                    <td><input type="text" name="boat_name" placeholder="Enter Boat Name"></td>
+                </tr>
+                <tr>
+                    <th>Boat Type</th>
+                    <td><input type="text" name="boat_type" placeholder="Enter Boat Type"></td>
+                </tr>
+                <tr>
+                    <th>Latitude</th>
+                    <td><input type="text" name="get_lat" placeholder="enter lat"></td>
+                </tr>
+                <tr>
+                    <th>
+                        Longitude
+                    </th>
+                    <td><input type="text" name="get_lng" placeholder="Enter lng"></td>
+                </tr>
+                <tr>
+                    <th>User Id</th>
+                    <td><input type="text" name="user_id" placeholder="Enter User Id"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Save Reports">
+                </tr>
+            </table>
+        </form>
+
+
+        <!-- ++++++++++++++++++++++++++++++++++ Get Report ++++++++++++++++++++++++++++++  -->
+
+
+        <h2>Get Report</h2>
+        <form method="post" action="/get_report">
+            <table>
+                <tr>
+                    <th>User id</th>
+                    <td><input type="text" name="user_id" placeholder="enter user id"></td>
+                </tr>
+                <tr>
+                    <th>Latitude</th>
+                    <td><input type="text" name="lat" placeholder="enter lat"></td>
+                </tr>
+                <tr>
+                    <th>
+                        Longitude
+                    </th>
+                    <td><input type="text" name="lng" placeholder="Enter lng"></td>
+                </tr>
+                <tr>
+                    <th>Radius</th>
+                    <td>
+                        <input type="text" name="radius" placeholder="Enter Radius">
+                    </td>
+                </tr>
+                 <tr>
+                    <td colspan="2"><input type="submit" value="Get Report">
+                </tr>
+            </table>
+        </form>
+
+        <!-- ++++++++++++++++++++++++++++++++++ ADD USER FORM ++++++++++++++++++++++++++++++  -->
+
+        <h2>Add User</h2>
+        <form method="post" action="/add_profile">
+            <table>
+                <tr>
+                    <th>Uid</th>
+                    <td><input type="text" name="uid" placeholder="User Id"></td>
+                </tr>
+                <tr>
+                    <th>Nick Name</th>
+                    <td><input type="text" name="nickname" placeholder="Enter Nick Name"></td>
+                </tr>
+                <tr>
+                    <th>Town</th>
+                    <td><input type="text" name="town" placeholder="Enter Town"></td>
+                </tr>
+                <tr>
+                    <th>District</th>
+                    <td><input type="text" name="district" placeholder="Enter District"></td>
+                </tr>
+                <tr>
+                    <th>Date of Birth</th>
+                    <td><input type="date" name="dob" placeholder="Enter the DOB"></td>
+                </tr>
+                <tr>
+                    <th>Boat Info</th>
+                    <td><input type="text" name="boatinfo" placeholder="Enter Boat Info"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Add Profile">
+                </tr>
+            </table>
+        </form>
+
+
+        <!-- ++++++++++++++++++++++++++++++++++ set iap ++++++++++++++++++++++++++++++  -->
+
+        <h2>Set Iap</h2>
+        <form method="post" action="/set_iap">
+            <table>
+                <tr>
+                    <th>User Id</th>
+                    <td>
+                        <input type="text" name="user_id" placeholder="Enter User Id">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Value</th>
+                    <td>
+                        <input type="text" name="value" placeholder="Enter Boolean Value">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Set Iap">
+                </tr>
+            </table>
+        </form>
+
+
+        <!-- ++++++++++++++++++++++++++++++++++ Get iap ++++++++++++++++++++++++++++++  -->
+
+
+
+        <h2>Get Iap</h2>
+        <form method="post" action="/get_iap">
+            <table>
+                <tr>
+                    <th>User Id</th>
+                    <td>
+                        <input type="text" name="user_id" placeholder="Enter User Id">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Get Iap">
+                </tr>
+            </table>
+        </form>
+
+        <!-- ++++++++++++++++++++++++++++++++++ Get User Details ++++++++++++++++++++++++++++++  -->
+
+        <h2>Get User Details</h2>
+        <form method="post" action="/get_user">
+            <table>
+                <tr>
+                    <th>User Id</th>
+                    <td>
+                        <input type="text" name="user_id" placeholder="Enter Report Id">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Get User Details">
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>

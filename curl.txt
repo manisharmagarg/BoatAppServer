@@ -1,0 +1,3 @@
+curl http://127.0.0.1:5000/verify_phoneno -d "phone=9988776655" -X POST -v
+
+curl http://127.0.0.1:5000/verify_code -d "code=9988776655" -X POST -v
